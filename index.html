@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB; /* Sky Blue background */
+        }
+
+        #helloText {
+            font-family: cursive;
+            font-size: 5em;
+            color: #FFFFFF; /* White text color */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999; /* Ensure text appears on top of flowers */
+        }
+
+        .flower {
+            position: absolute;
+            animation: spinExpand 6s linear infinite;
+        }
+
+        .petal {
+            width: 5px;
+            height: 50px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            animation: bloomPetal 0.5s ease-in-out forwards infinite alternate;
+        }
+
+        @keyframes spinExpand {
+            to {
+                transform: translateX(100vw) translateY(100vh) rotate(720deg);
+            }
+        }
+
+        @keyframes bloomPetal {
+            to {
+                height: 80px;
+            }
+        }
+    </style>
+    <title>Spinning and Expanding Flowers</title>
+</head>
+<body>
+    <div id="helloText">hello</div>
+
+    <div class="flower" style="top: 20%; left: 20%;">
+        <div class="petal" style="transform: rotate(60deg); background-color: #FFD700;"></div>
+        <div class="petal" style="transform: rotate(120deg); background-color: #FFD700;"></div>
+        <div class="petal" style="transform: rotate(180deg); background-color: #FFD700;"></div>
+        <div class="petal" style="transform: rotate(240deg); background-color: #FFD700;"></div>
+        <div class="petal" style="transform: rotate(300deg); background-color: #FFD700;"></div>
+        <div class="petal" style="transform: rotate(360deg); background-color: #FFD700;"></div>
+    </div>
+
+    <div class="flower" style="top: 50%; left: 50%;">
+        <div class="petal" style="transform: rotate(60deg); background-color: #FFC0CB;"></div>
+        <div class="petal" style="transform: rotate(120deg); background-color: #FFC0CB;"></div>
+        <div class="petal" style="transform: rotate(180deg); background-color: #FFC0CB;"></div>
+        <div class="petal" style="transform: rotate(240deg); background-color: #FFC0CB;"></div>
+        <div class="petal" style="transform: rotate(300deg); background-color: #FFC0CB;"></div>
+        <div class="petal" style="transform: rotate(360deg); background-color: #FFC0CB;"></div>
+    </div>
+
+    <div class="flower" style="top: 80%; left: 80%;">
+        <div class="petal" style="transform: rotate(60deg); background-color: #98FB98;"></div>
+        <div class="petal" style="transform: rotate(120deg); background-color: #98FB98;"></div>
+        <div class="petal" style="transform: rotate(180deg); background-color: #98FB98;"></div>
+        <div class="petal" style="transform: rotate(240deg); background-color: #98FB98;"></div>
+        <div class="petal" style="transform: rotate(300deg); background-color: #98FB98;"></div>
+        <div class="petal" style="transform: rotate(360deg); background-color: #98FB98;"></div>
+    </div>
+
+    <script>
+        // You can add JavaScript functionality here if needed
+    </script>
+</body>
+</html>
